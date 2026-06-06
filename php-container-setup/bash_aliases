@@ -1,7 +1,7 @@
 alias mysql-perpl="mysql --ssl-verify-server-cert=false -h db_server -u propel -ppropel propel"
 alias psql-perpl="PGPASSWORD=propel psql -h db_server -U propel propel"
 
-alias perpl="'$PERPL_HOME/bin/propel'"
+alias perpl="'$PERPL_HOME/bin/perpl'"
 alias perpl-composer="composer --working-dir='$PERPL_HOME'"
 alias toperpl="cd '$PERPL_HOME'"
 
