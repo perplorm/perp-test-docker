@@ -1,15 +1,16 @@
 services:
   db_server:
     image: postgres
-    container_name: 'propel-test-postgres'
+    container_name: 'perpl-test-postgres'
     restart: always
     environment:
-      POSTGRES_PASSWORD: 'propel'
-      POSTGRES_USER: 'propel'
-      PGUSER: 'propel'
+      POSTGRES_PASSWORD: 'perpl'
+      POSTGRES_USER: 'perpl'
+      PGUSER: 'perpl'
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
       interval: 5s
       retries: 5
     networks:
-      - propel-test-net
+      - perpl-test-net
+    # command: ["postgres", "-c", "log_statement=all"]

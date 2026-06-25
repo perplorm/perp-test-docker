@@ -1,13 +1,13 @@
 services:
   db_server:
     image: mysql
-    container_name: 'propel-test-mysql'
+    container_name: 'perpl-test-mysql'
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: propel
-      MYSQL_USER: propel
-      MYSQL_PASSWORD: propel
-      MYSQL_DATABASE: propel
+      MYSQL_ROOT_PASSWORD: perpl
+      MYSQL_USER: perpl
+      MYSQL_PASSWORD: perpl
+      MYSQL_DATABASE: perpl
     volumes:
       - ./mysql-container-setup/mysql.setup.sql:/docker-entrypoint-initdb.d/init.sql
     tmpfs:
@@ -22,4 +22,4 @@ services:
       interval: 5s
       retries: 5
     networks:
-      - propel-test-net
+      - perpl-test-net

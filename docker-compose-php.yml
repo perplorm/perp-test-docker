@@ -1,18 +1,18 @@
 networks:
-  propel-test-net:
+  perpl-test-net:
 
 services:
-  propel-test:
+  perpl-test:
     build:
       context: .
       dockerfile: ./php-container-setup/Dockerfile
-    container_name: 'propel-test-php'
+    container_name: 'perpl-test-php'
     stop_grace_period: 1s
     environment:
       DB_HOSTNAME: db_server
-      DB_USER: propel
-      DB_PW: propel
-      DB_NAME: propel
+      DB_USER: perpl
+      DB_PW: perpl
+      DB_NAME: perpl
       ALLOW_TESTS_AS_ROOT: 1
       XDEBUG_CONFIG: "idekey=VSCODE"
       PERPL_HOME: ${PERPL_HOME}
@@ -20,7 +20,6 @@ services:
     tty: true
     volumes:
       - ${PERPL_HOME}:${PERPL_HOME}
-      - /propel/vendor
       - /tmp/perplQuickBuild/:/tmp/perplQuickBuild/
     working_dir:
       ${PERPL_HOME}
@@ -30,4 +29,4 @@ services:
       db_server:
         condition: service_healthy
     networks:
-      - propel-test-net
+      - perpl-test-net

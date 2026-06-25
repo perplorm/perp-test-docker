@@ -1,13 +1,13 @@
-alias mysql-perpl="mysql --ssl-verify-server-cert=false -h db_server -u propel -ppropel propel"
-alias psql-perpl="PGPASSWORD=propel psql -h db_server -U propel propel"
+alias mysql-perpl="mysql --ssl-verify-server-cert=false -h db_server -u perpl -pperpl perpl"
+alias psql-perpl="PGPASSWORD=perpl psql -h db_server -U perpl perpl"
 
 alias perpl="'$PERPL_HOME/bin/perpl'"
 alias perpl-composer="composer --working-dir='$PERPL_HOME'"
 alias toperpl="cd '$PERPL_HOME'"
 
 alias fixtures-rm="rm -f '$PERPL_HOME/tests/Fixtures/fixtures_built'"
-alias fixtures-mysql="perpl test:prepare --vendor=mysql --dsn='mysql:host=db_server;port=3306;dbname=propel' --user=propel --password=propel --exclude-database"
-alias fixtures-postgres="perpl test:prepare --vendor=pgsql --dsn='pgsql:host=db_server;port=5432;dbname=propel' --user=propel --password=propel --exclude-database"
+alias fixtures-mysql="perpl test:prepare --vendor=mysql --dsn='mysql:host=db_server;port=3306;dbname=perpl' --user=perpl --password=perpl --exclude-database"
+alias fixtures-postgres="perpl test:prepare --vendor=pgsql --dsn='pgsql:host=db_server;port=5432;dbname=perpl' --user=perpl --password=perpl --exclude-database"
 alias fixtures-sqlite="perpl test:prepare --vendor=sqlite --dsn='sqlite:$PERPL_HOME/tests/test.sq3' --exclude-database"
 
 alias rebuild-references="$PERPL_HOME/tests/bin/rebuild-reference-files"

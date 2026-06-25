@@ -40,7 +40,7 @@ docker compose -f docker-compose-postgres.yml -f docker-compose-mysql.yml -f doc
 ```
 ## Exec into container
 ```bash
-docker exec -it propel-test-php /bin/bash
+docker exec -it perpl-test-php /bin/bash
 ```
 
 ## Set up environment

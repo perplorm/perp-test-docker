@@ -29,8 +29,8 @@ RUN pecl install xdebug \
  && mv composer.phar /usr/local/bin/composer
  
 
-COPY ./php-container-setup/php-propel.ini "$PHP_INI_DIR"/conf.d/php-propel.ini
+COPY ./php-container-setup/php-perpl.ini "$PHP_INI_DIR"/conf.d/php-perpl.ini
 COPY ./php-container-setup/bashrc /root/.bashrc
 COPY ./php-container-setup/bash_aliases /root/.bash_aliases
 
-WORKDIR /propel/
+WORKDIR /perpl/

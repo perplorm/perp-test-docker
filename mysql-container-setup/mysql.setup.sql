@@ -1,2 +1,2 @@
-grant all privileges on *.* to 'propel'@'%';
+grant all privileges on *.* to 'perpl'@'%';
 flush privileges;
